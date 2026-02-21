@@ -1,0 +1,189 @@
+/* WARNA: Ungu Dominan + Item + Putih */
+:root {
+    --ungu-tua: #1a0b2e;    /* Background utama (item keunguan) */
+    --ungu-item: #2d1b4e;   /* Item banget */
+    --ungu-terang: #6d28d9;  /* Aksen ungu */
+    --putih: #ffffff;        /* Putih murni */
+    --abu-muda: #f3f4f6;     /* Putih sedikit abu */
+    --text-gelap: #1f2937;   /* Teks hitam buat kontras */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--ungu-tua);
+    color: var(--putih);
+}
+
+.app {
+    max-width: 480px; /* Ukuran HP */
+    margin: 0 auto;
+    background-color: var(--ungu-tua);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 70px; /* Ruang buat menu bawah */
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--ungu-item);
+    padding: 1.2rem;
+    border-bottom: 3px solid var(--ungu-terang);
+}
+
+header h1 {
+    color: var(--putih);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--putih);
+    color: var(--text-gelap);
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #6b7280;
+}
+
+/* ===== MAIN CONTENT ===== */
+#mainContent {
+    padding: 1rem;
+}
+
+/* ===== BOTTOM NAV (Menu Putih) ===== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    width: 100%;
+    background-color: var(--ungu-item);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border-top: 2px solid var(--ungu-terang);
+    border-radius: 25px 25px 0 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--putih);
+    font-size: 1.8rem;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.nav-btn.active {
+    opacity: 1;
+    background-color: var(--ungu-terang);
+    transform: translateY(-5px);
+}
+
+/* ===== GRID KOMIK ===== */
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.comic-card {
+    background-color: var(--putih);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.comic-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+.comic-card .info {
+    padding: 0.5rem;
+}
+
+.comic-card h4 {
+    color: var(--text-gelap);
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comic-card p {
+    color: var(--ungu-terang);
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+    color: var(--putih);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--ungu-terang);
+    padding-left: 1rem;
+}
+
+/* ===== LIST HISTORY/DOWNLOAD ===== */
+.list-item {
+    background-color: var(--ungu-item);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    border-left: 5px solid var(--ungu-terang);
+}
+
+.list-item h4 {
+    color: var(--putih);
+    font-size: 1rem;
+}
+
+.list-item p {
+    color: var(--ungu-terang);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+/* ===== PROFILE ===== */
+.profile-card {
+    background-color: var(--ungu-item);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.profile-avatar {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-card h3 {
+    color: var(--putih);
+    margin-bottom: 0.5rem;
+}
+
+.profile-card p {
+    color: var(--abu-muda);
+    margin-bottom: 0.3rem;
+}
